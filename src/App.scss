@@ -30,17 +30,6 @@ section {
   @include flex(0, 0, 20px);
 }
 
-.content-container {
-  flex-direction: column;
-  @include flex(0, flex-start, 5px);
-}
-
-.content-container img {
-  width: 300px;
-  border-radius: 10px;
-  margin-bottom: 3px;
-}
-
 @mixin font($size, $color, $border, $padding) {
   font-size: $size;
   color: $color;
@@ -48,16 +37,27 @@ section {
   padding: $padding;
 }
 
-.content-container span {
-  border-radius: 3px;
-  @include font(12px, #d7fa00, 1px solid #d7fa00, 4px 5px);
-}
+.content-container {
+  flex-direction: column;
+  @include flex(0, flex-start, 5px);
 
-.content-container div {
-  font-size: 18px;
-  font-weight: 600;
-}
+  img {
+    width: 300px;
+    border-radius: 10px;
+    margin-bottom: 3px;
+  }
 
-.content-container p {
-  @include font(12px, rgb(160, 160, 160), 0, 0);
+  span {
+    border-radius: 3px;
+    @include font(12px, #d7fa00, 1px solid #d7fa00, 4px 5px);
+  }
+
+  div {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  p {
+    @include font(12px, rgb(160, 160, 160), 0, 0);
+  }
 }
